@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import altair as alt
 
 def show_data(mail):
     ind = int(data[data["Student Email"] == mail].index.values)
