@@ -27,9 +27,6 @@ def show_data(mail):
     if quests>=30 and skill>=15:
         st.write("Milestone achieved : Ultimate Milestone!!")
         st.write("Prizes : Career Readiness Program seat + Laptop Bag + Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
-    else:
-        st.write("Milestone achieved : --")
-        st.write("Prizes : --")
     st.subheader("For any queries, kindly drop in a mail to gayathri.mi20@iiitmk.ac.in")
     st.write(" ")
 
