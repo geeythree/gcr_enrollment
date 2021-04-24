@@ -12,18 +12,15 @@ def show_data(mail):
     st.write("No. of Skill Badges Completed : ",data['# of Skill Badges Completed'][ind])
     quests = int(data['# of Quests Completed'][ind])
     skill = int(data['# of Skill Badges Completed'][ind])
-    if quests>=8 and skill>=4:
-        if quests<16 and skill<8:
-            st.write("Milestone achieved : Milestone 1")
-            st.write("Prizes : T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
-    if quests>=16 and skill>=8:
-        if quests<24 and skill<12:
-            st.write("Milestone achieved : Milestone 2")
-            st.write("Prizes : Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
-    if quests>=24 and skill>=12:
-        if quests<30 and skill<15:
-            st.write("Milestone achieved : Milestone 3")
-            st.write("Prizes : Laptop Bag + Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
+    if (quests>=8 or quests<16) and skill>=4 or skill<8:
+         st.write("Milestone achieved : Milestone 1")
+        st.write("Prizes : T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
+    if (quests>=16 or quests<24) and (skill>=8 or skill<12):
+        st.write("Milestone achieved : Milestone 2")
+        st.write("Prizes : Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
+    if (quests>=24 or quests<30) and (skill>=12 or skill<15) :
+        st.write("Milestone achieved : Milestone 3")
+        st.write("Prizes : Laptop Bag + Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
     if quests>=30 and skill>=15:
         st.write("Milestone achieved : Ultimate Milestone!!")
         st.write("Prizes : Career Readiness Program seat + Laptop Bag + Sling Bag + T-shirt + Pen + Badge + Stickers + Thank-you card from Google")
