@@ -51,10 +51,11 @@ def error():
     st.write(" ")
 
 def create_leaderboard(data):
-    data.sort_values('quests', ascending=False, inplace=True, na_position="last") 
+    data.drop(data[data.quests < 8].index, inplace=True)
+    data.drop(data[data.skills < 4].index, inplace=True)
     data.sort_values('skills', ascending=False, inplace=True, na_position="last")
-    data.drop(data[data.quests < 9].index, inplace=True)
-    data.drop(data[data.skills < 5].index, inplace=True)
+    data.sort_values('quests', ascending=False, inplace=True, na_position="last") 
+    #st.write(data)
     
     cols = st.beta_columns(8)
     cols[3].write('Position')
