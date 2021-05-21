@@ -57,9 +57,9 @@ def create_leaderboard(data):
     data.sort_values('quests', ascending=False, inplace=True, na_position="last") 
     #st.write(data)
     
-    cols = st.beta_columns(7)
+    cols = st.beta_columns(6)
     cols[2].write('Position')
-    cols[4].write('Name')
+    cols[3].write('Name')
     pos=1
     names=data["Student Name"].tolist()
     new_names=[]
@@ -73,7 +73,7 @@ def create_leaderboard(data):
         new_names.append(first+" "+initial)
     for student in new_names:
         cols[2].write(str(pos))
-        cols[4].write(student)
+        cols[3].write(student)
         pos = int(pos)
         pos += 1
 
