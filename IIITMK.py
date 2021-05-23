@@ -33,11 +33,11 @@ def show_data(mail):
 def milestone(ind):
     quests = int(data['quests'][ind])
     skill = int(data['skills'][ind])
-    if (quests>=8 and quests<16) or (skill>=4 and skill<8):
+    if (quests>=8 and quests<16) and (skill>=4 and skill<8):
         return "milestone_1"
-    elif (quests>=16 and quests<24) or (skill>=8 and skill<12):
+    elif (quests>=16 and quests<24) and (skill>=8 and skill<12):
         return "milestone_2"
-    elif (quests>=24 and quests<30) or (skill>=12 and skill<15) :
+    elif (quests>=24 and quests<30) and (skill>=12 and skill<15) :
         return "milestone_3"
     elif quests>=30 or skill>=15:
         return "milestone_4"
