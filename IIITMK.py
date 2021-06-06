@@ -37,7 +37,7 @@ def milestone(ind):
         return "milestone_1"
     elif (quests>=16 and quests<=30) and (skill>=8 and skill<12):
         return "milestone_2"
-    elif (quests>=24 and quests<=30) and (skill>=12 and skill<15) :
+    elif (quests>=24 and quests<30) and (skill>=12 and skill<=15) :
         return "milestone_3"
     elif quests==30 and skill==15:
         return "milestone_4"
