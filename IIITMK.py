@@ -32,19 +32,21 @@ def show_data(mail):
 
 def milestone(ind):
     quests = int(data['quests'][ind])
-    skill = int(data['skills'][ind])
-    if (quests>=8 and quests<=30) and (skill>=4 and skill<8):
+    skill = int(data['skills'][ind])  
+    if quests in range(8,31) and skill in range(4,8):
         return "milestone_1"
-    elif (quests>=16 and quests<=30) and (skill>=8 and skill<12):
+    elif quests in range(16,31) and skill in range(8, 12):
         return "milestone_2"
-    elif (quests>=24 and quests<30) and (skill>=12 and skill<=15) :
+    elif quests in range(24, 31) and skill in range(12,15):
         return "milestone_3"
-    elif quests==30 and skill==15:
+    elif quests == 30 and skill == 15:
         return "milestone_4"
+    elif quests == 24 and skill == 11:
+        return "milestone_2"
     else:
         return None
     
-
+    
 def error():
     st.subheader("No data found!")
     st.subheader("For any queries, kindly drop in a mail to gayathri.mi20@iiitmk.ac.in")
